@@ -71,6 +71,40 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-buu include" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/14/buu%20include/" class="article-date">
+  <time class="dt-published" datetime="2023-01-14T09:58:01.208Z" itemprop="datePublished">2023-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>​<br>先查看源码，发现啥也没有<br>​​<img src="https://img-blog.csdnimg.cn/c24df38992e1497c9401d201b47117ee.bmp" alt="请添加图片描述"></p>
+<p> 然后去搜索一下，发现了一个php:&#x2F;&#x2F;filter 协议</p>
+<p>构造file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;flag.php</p>
+<p>可以得出</p>
+<p><img src="https://img-blog.csdnimg.cn/f0f27186f3a8457faa1be7ae6d9d87c1.bmp" alt="请添加图片描述"></p>
+<p> 然后观察一下是base64解码，用base64进行解码，可得flag<br>&lt;?php echo “Can you find out the flag?”;<br>&#x2F;&#x2F;flag{33d1ac70-447e-4e95-8d3c-fb51880173f2}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/14/buu%20include/" data-id="clcvrzltp000098ut8zfk2lxe" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/01/14/hello-world/" class="article-date">
@@ -151,6 +185,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/01/14/buu%20include/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2023/01/14/hello-world/">Hello World</a>
