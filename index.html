@@ -71,6 +71,41 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-代码审计" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/15/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="article-date">
+  <time class="dt-published" datetime="2023-01-15T07:56:23.958Z" itemprop="datePublished">2023-01-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计."></a>代码审计.</h2><p>本词条由 “科普中国”科学百科词条编写与应用工作项目 审核 。. 顾名思义就是检查 源代码 中的安全缺陷，检查程序源代码是否存在安全隐患，或者有编码不规范的地方，通过自动化工具或者人工审查的方式，对程序源代码逐条进行检查和分析，发现这些源代码缺陷引发的安全漏洞，并提供代码修订措施和建议。.<br>简单意为分析代码</p>
+<p>eg ：BugKu_闪电十六鞭<br><img src="https://img-blog.csdnimg.cn/30f8ae32ddee42039c9fcbbc1644742d.bmp" alt="请添加图片描述"><br>对此代码进行分析：可得<br>flag变量长度等于$exam的长度，长度为49</p>
+<p>flag变量不能包含&#96; , “ , . , \ , ( , ) , [ , ] , _ , flag , echo , print , require , include , die , exit ;</p>
+<p>eval($_GET[‘flag’]) &#x3D;&#x3D;&#x3D; sha1($flag)</p>
+<p>其中第三点等于sha1可以利用短标签绕过判断，直接利用eval输出$flag变量的值，构造payload绕过对flag字符串的过滤，payload为?</p>
+<p>flag&#x3D;$a&#x3D;’blag’;$a{0}&#x3D;’f’;?&gt;11111111111111111;<?=$$a;?>,得到flag{78062956} ；其中?&gt;用于闭合开头的<?php 标记，111…111是用来填充长度的，
+其中<?=$var?>和<?php echo $var; ?>的效果是一样的，用于输出某个变量</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/15/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" data-id="clcx335r30000fkut9zm7a2h1" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-ctfshow入门2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/01/14/ctfshow%E5%85%A5%E9%97%A82/" class="article-date">
@@ -250,6 +285,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/01/15/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2023/01/14/ctfshow%E5%85%A5%E9%97%A82/">(no title)</a>
